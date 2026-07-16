@@ -780,15 +780,93 @@ a {
     font-size: clamp(48px, 16vw, 72px);
   }
 }
-/* Tengah dan rapatkan bahagian statistik */
+/* Betulkan dan tengahkan 3 statistik */
 .stats-grid {
-  max-width: 950px;
-  margin-left: auto;
-  margin-right: auto;
-  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 60px;
 }
 
-.stat-item {
-  width: 100%;
+.stat {
   text-align: center;
+}
+
+/* Paparan telefon */
+@media (max-width: 680px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 32px;
+  }
+}
+/* Jadikan slogan satu baris pada komputer */
+.hero-motto {
+  white-space: nowrap;
+  max-width: none;
+  width: max-content;
+  font-size: clamp(24px, 2.4vw, 36px);
+}
+
+/* Telefon: benarkan turun baris supaya tak terkeluar skrin */
+@media (max-width: 700px) {
+  .hero-motto {
+    white-space: normal;
+    width: auto;
+  }
+}
+/* =========================================
+   MENU PANEL UNTUK SEMUA SAIZ SKRIN
+   ========================================= */
+
+/* Sentiasa tunjuk butang hamburger */
+.menu-toggle {
+  display: block !important;
+  position: relative;
+  z-index: 1002;
+  padding: 10px 12px;
+  border: 1px solid currentColor;
+  border-radius: 12px;
+}
+
+/* Sorok senarai menu selagi belum ditekan */
+.main-nav {
+  position: fixed !important;
+  inset: 82px clamp(18px, 5vw, 70px) auto auto !important;
+
+  width: min(320px, calc(100vw - 36px));
+  display: none !important;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+
+  padding: 18px;
+  background: white;
+  color: var(--ink) !important;
+  border: 1px solid rgba(116, 27, 36, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(36, 22, 18, 0.2);
+  z-index: 1001;
+}
+
+/* Keluar apabila butang ditekan */
+.main-nav.open {
+  display: flex !important;
+}
+
+/* Bentuk pilihan di dalam panel */
+.main-nav a {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+
+.main-nav a:hover {
+  background: var(--cream);
+  color: var(--maroon);
+}
+
+/* Samakan butang Hubungi dengan menu lain */
+.main-nav .nav-cta {
+  border: 0;
 }
