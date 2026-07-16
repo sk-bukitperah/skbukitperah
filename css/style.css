@@ -1283,32 +1283,58 @@ a {
     text-align: center;
   }
 }
-/* Tajuk Pautan Pantas */
-.quick-links-title {
-  grid-column: 1 / -1;
-  margin: 0 0 10px;
-  padding: 0 4px;
+/* =========================================
+   SECTION PAUTAN PANTAS
+   ========================================= */
+
+.quick-section {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 0 !important;
+  padding: 65px 0 80px;
+
+  background: #f7f3ee;
 }
 
-.quick-links-title span {
-  display: block;
-  margin-bottom: 7px;
-  color: #e9b400;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
+.quick-section-heading {
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 30px;
+  padding: 18px 28px;
+
+  background: #7b1d27;
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(66, 25, 29, 0.16);
 }
 
-.quick-links-title h2 {
+.quick-section-heading h2 {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(30px, 4vw, 48px);
+
+  font-size: clamp(28px, 4vw, 42px);
   line-height: 1;
 }
 
+.quick-section-heading p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+}
+
+.quick-section .quick-grid {
+  margin-top: 0;
+}
+
 @media (max-width: 700px) {
-  .quick-links-title {
+  .quick-section {
+    padding: 45px 0 60px;
+  }
+
+  .quick-section-heading {
+    width: 100%;
+    padding: 18px 20px;
     text-align: center;
-    margin-bottom: 6px;
   }
 }
