@@ -780,3 +780,15 @@ a {
     font-size: clamp(48px, 16vw, 72px);
   }
 }
+/* Tengah dan rapatkan bahagian statistik */
+.stats-grid {
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+}
+
+.stat-item {
+  width: 100%;
+  text-align: center;
+}
