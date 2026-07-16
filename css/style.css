@@ -1557,3 +1557,239 @@ a {
     padding: 26px;
   }
 }
+/* =========================================
+   HALAMAN PENTADBIRAN
+   ========================================= */
+
+.administration-main {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 80px 0 110px;
+}
+
+.administration-heading {
+  max-width: 900px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.administration-heading > p {
+  margin: 0 0 14px;
+  color: #d39d00;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.administration-heading h1 {
+  margin: 0 0 20px;
+  color: #7b1d27;
+
+  font-size: clamp(46px, 7vw, 78px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.administration-heading > span {
+  display: block;
+  max-width: 680px;
+  margin: 0 auto;
+
+  color: #686066;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* CARTA ORGANISASI */
+
+.organisation-chart {
+  position: relative;
+}
+
+.organisation-top {
+  display: flex;
+  justify-content: center;
+}
+
+.organisation-team {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+
+/* KAD PENTADBIR */
+
+.administrator-card {
+  overflow: hidden;
+  background: #ffffff;
+
+  border: 1px solid rgba(123, 29, 39, 0.1);
+  border-radius: 26px;
+
+  box-shadow: 0 20px 50px rgba(61, 32, 34, 0.1);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.administrator-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 65px rgba(61, 32, 34, 0.16);
+}
+
+.administrator-card-main {
+  width: min(390px, 100%);
+  border: 2px solid #d9a600;
+}
+
+.administrator-photo {
+  height: 360px;
+  overflow: hidden;
+  background: #eee8e2;
+}
+
+.administrator-card-main .administrator-photo {
+  height: 410px;
+}
+
+.administrator-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center top;
+}
+
+.administrator-information {
+  padding: 26px 25px 30px;
+  text-align: center;
+}
+
+.administrator-information span {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #d39d00;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.administrator-information h2 {
+  margin: 0 0 9px;
+  color: #7b1d27;
+
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.administrator-information p {
+  margin: 0;
+  color: #686066;
+  font-size: 15px;
+}
+
+
+/* GARIS PENGHUBUNG CARTA */
+
+.organisation-connector {
+  position: relative;
+  width: min(790px, 70%);
+  height: 85px;
+  margin: 0 auto;
+}
+
+.organisation-connector::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 2px;
+  height: 42px;
+
+  background: #d9a600;
+  transform: translateX(-50%);
+}
+
+.organisation-connector::after {
+  content: "";
+  position: absolute;
+
+  top: 41px;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: #d9a600;
+}
+
+.organisation-connector span::before,
+.organisation-connector span::after {
+  content: "";
+  position: absolute;
+
+  top: 41px;
+
+  width: 2px;
+  height: 44px;
+
+  background: #d9a600;
+}
+
+.organisation-connector span::before {
+  left: 0;
+}
+
+.organisation-connector span::after {
+  right: 0;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .organisation-connector {
+    display: none;
+  }
+
+  .organisation-team {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 30px auto 0;
+  }
+
+  .administrator-card-main {
+    max-width: 520px;
+  }
+}
+
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+  .administration-main {
+    width: min(100% - 28px, 1180px);
+    padding: 55px 0 75px;
+  }
+
+  .administration-heading {
+    margin-bottom: 40px;
+  }
+
+  .administration-heading h1 {
+    font-size: 43px;
+  }
+
+  .administrator-photo,
+  .administrator-card-main .administrator-photo {
+    height: 350px;
+  }
+}
