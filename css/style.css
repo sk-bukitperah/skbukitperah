@@ -755,3 +755,28 @@ a {
     flex-direction: column;
   }
 }
+/* Betulkan kedudukan tajuk utama */
+.hero-content {
+  padding-left: clamp(30px, 7vw, 110px);
+  padding-right: 30px;
+}
+
+.hero h1 {
+  max-width: none;
+  white-space: nowrap;
+  font-size: clamp(58px, 7vw, 110px);
+  letter-spacing: -0.04em;
+}
+
+/* Untuk telefon, benarkan turun baris supaya tidak terkeluar */
+@media (max-width: 700px) {
+  .hero-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero h1 {
+    white-space: normal;
+    font-size: clamp(48px, 16vw, 72px);
+  }
+}
