@@ -1,1 +1,0 @@
-// SK Bukit Perah JavaScript
