@@ -1793,3 +1793,456 @@ a {
     height: 350px;
   }
 }
+/* =========================================
+   LUXURY SCHOOL — MAROON, GOLD & CREAM
+   ========================================= */
+
+:root {
+  --luxury-maroon-dark: #3d0b13;
+  --luxury-maroon: #741923;
+  --luxury-maroon-light: #a33b35;
+  --luxury-gold: #e2ad19;
+  --luxury-gold-light: #ffd667;
+  --luxury-cream: #f8f1e7;
+  --luxury-black: #181315;
+}
+
+
+/* HEADER PUTIH PREMIUM */
+.site-header {
+  background: rgba(255, 252, 247, 0.96) !important;
+  color: var(--luxury-maroon) !important;
+
+  border-bottom: 1px solid rgba(116, 25, 35, 0.08);
+  box-shadow: 0 10px 30px rgba(44, 20, 23, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.site-header .brand strong {
+  color: var(--luxury-maroon) !important;
+}
+
+.site-header .brand span {
+  color: #9d555b !important;
+}
+
+.menu-toggle {
+  color: var(--luxury-maroon) !important;
+  background: #ffffff !important;
+  border: 1.5px solid var(--luxury-maroon) !important;
+  box-shadow: 0 8px 22px rgba(52, 18, 23, 0.08);
+}
+
+
+/* HERO UTAMA */
+.hero {
+  position: relative;
+  min-height: 760px;
+  padding: 145px 0 100px;
+
+  color: #ffffff;
+  background: var(--luxury-cream) !important;
+  overflow: hidden;
+}
+
+
+/* PANEL OMBRE MAROON */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 22px 24px 28px;
+
+  background:
+    radial-gradient(
+      circle at 82% 22%,
+      rgba(255, 214, 103, 0.22) 0,
+      rgba(255, 214, 103, 0.22) 110px,
+      transparent 112px
+    ),
+    radial-gradient(
+      circle at 68% 80%,
+      rgba(255, 255, 255, 0.08) 0,
+      rgba(255, 255, 255, 0.08) 85px,
+      transparent 87px
+    ),
+    linear-gradient(
+      125deg,
+      #350810 0%,
+      #59101a 28%,
+      #7b1d27 54%,
+      #a84437 76%,
+      #d48938 100%
+    );
+
+  border-radius: 38px;
+  box-shadow:
+    0 30px 80px rgba(48, 15, 20, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+
+/* GARIS EMAS HIASAN */
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+
+  right: 95px;
+  bottom: 85px;
+
+  width: 230px;
+  height: 230px;
+
+  border: 1px solid rgba(255, 214, 103, 0.30);
+  border-radius: 50%;
+
+  box-shadow:
+    -145px -235px 0 -65px rgba(255, 214, 103, 0.32),
+    -360px 40px 0 -85px rgba(255, 255, 255, 0.13);
+}
+
+.hero-overlay {
+  display: none !important;
+}
+
+
+/* KANDUNGAN HERO */
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1040px;
+  padding-left: clamp(45px, 8vw, 135px) !important;
+  padding-right: 45px !important;
+}
+
+
+/* LABEL KECIL */
+.hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 24px;
+  padding: 9px 16px;
+
+  color: var(--luxury-gold-light) !important;
+  background: rgba(25, 8, 12, 0.25);
+
+  border: 1px solid rgba(255, 214, 103, 0.32);
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+
+/* NAMA SEKOLAH */
+.hero h1 {
+  max-width: none;
+  margin: 0 0 28px;
+
+  color: #fffaf3 !important;
+
+  font-size: clamp(62px, 7.4vw, 112px);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+
+  text-shadow: 0 14px 35px rgba(28, 6, 10, 0.18);
+  white-space: nowrap;
+}
+
+
+/* SLOGAN */
+.hero-motto {
+  width: max-content;
+  max-width: 100%;
+  margin-bottom: 14px;
+
+  color: #fff8ef !important;
+
+  font-size: clamp(25px, 2.5vw, 39px);
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.hero-address {
+  color: rgba(255, 247, 237, 0.76) !important;
+}
+
+
+/* BUTANG EMAS */
+.hero .btn-gold {
+  color: #351014 !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--luxury-gold-light) 0%,
+      var(--luxury-gold) 100%
+    ) !important;
+
+  border: none !important;
+  box-shadow: 0 14px 32px rgba(110, 75, 0, 0.28);
+}
+
+.hero .btn-gold:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe58b 0%,
+      #efba26 100%
+    ) !important;
+}
+
+
+/* BUTANG OUTLINE */
+.hero .btn-outline {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+
+  border-color: rgba(255, 255, 255, 0.50) !important;
+}
+
+.hero .btn-outline:hover {
+  color: var(--luxury-maroon-dark) !important;
+  background: #fffaf3 !important;
+}
+
+.hero .scroll-cue {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+
+/* =========================================
+   PAUTAN PANTAS — SECTION BERASINGAN
+   ========================================= */
+
+.quick-section {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 0 !important;
+  padding: 76px 0 90px;
+
+  background:
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(226, 173, 25, 0.10),
+      transparent 25%
+    ),
+    linear-gradient(
+      145deg,
+      #120e10 0%,
+      #211316 55%,
+      #3b1017 100%
+    ) !important;
+}
+
+
+/* PANEL TAJUK */
+.quick-section-heading {
+  width: fit-content;
+  max-width: 100%;
+
+  margin: 0 0 34px;
+  padding: 20px 30px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 214, 103, 0.25);
+  border-radius: 20px;
+
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.20);
+}
+
+.quick-section-heading h2 {
+  margin: 0;
+
+  color: #fff9f0;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1;
+}
+
+.quick-section-heading p {
+  margin: 9px 0 0;
+
+  color: rgba(255, 249, 240, 0.65);
+  font-size: 14px;
+}
+
+
+/* KAD PAUTAN */
+.quick-section .quick-grid {
+  margin-top: 0;
+}
+
+.quick-card {
+  min-height: 190px;
+  padding: 27px 24px;
+
+  color: #2b2022;
+  background:
+    linear-gradient(
+      145deg,
+      #fffdf9 0%,
+      #f5eadb 100%
+    ) !important;
+
+  border: 1px solid rgba(226, 173, 25, 0.16) !important;
+  border-radius: 24px !important;
+
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+
+  transition:
+    transform 0.24s ease,
+    box-shadow 0.24s ease,
+    border-color 0.24s ease;
+}
+
+.quick-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(226, 173, 25, 0.45) !important;
+
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+
+/* IKON EMAS */
+.quick-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe17b 0%,
+      #dca414 100%
+    ) !important;
+
+  border-radius: 17px;
+  box-shadow: 0 10px 24px rgba(150, 104, 0, 0.18);
+
+  font-size: 27px;
+}
+
+.quick-card strong {
+  color: var(--luxury-maroon) !important;
+  font-size: 18px;
+}
+
+.quick-card small {
+  color: #716367 !important;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* MENU PANEL */
+.main-nav {
+  background: rgba(255, 252, 247, 0.96) !important;
+  border: 1px solid rgba(116, 25, 35, 0.09) !important;
+
+  box-shadow: 0 26px 70px rgba(42, 16, 20, 0.20) !important;
+  backdrop-filter: blur(14px);
+}
+
+.main-nav a {
+  color: #2d2022 !important;
+}
+
+.main-nav a:hover {
+  color: var(--luxury-maroon) !important;
+  background: #f7eee2 !important;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 720px;
+    padding: 130px 0 90px;
+  }
+
+  .hero::before {
+    inset: 16px;
+    border-radius: 28px;
+  }
+
+  .hero::after {
+    right: 40px;
+    bottom: 55px;
+
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+
+    padding-left: 42px !important;
+    padding-right: 42px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(50px, 12vw, 78px);
+    white-space: normal;
+  }
+
+  .hero-motto {
+    width: auto;
+    white-space: normal;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 680px;
+    padding-top: 115px;
+  }
+
+  .hero::before {
+    inset: 12px;
+    border-radius: 24px;
+  }
+
+  .hero-content {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(47px, 14vw, 68px);
+  }
+
+  .hero-motto {
+    font-size: 23px;
+  }
+
+  .quick-section {
+    padding: 55px 0 70px;
+  }
+
+  .quick-section-heading {
+    width: 100%;
+    padding: 18px 20px;
+    text-align: center;
+  }
+}
