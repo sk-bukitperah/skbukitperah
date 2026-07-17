@@ -2246,3 +2246,38 @@ a {
     text-align: center;
   }
 }
+/* Susunan khas untuk Laporan Mingguan */
+.report-actions-weekly {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Butang jadual duduk satu baris penuh */
+.report-actions-weekly .report-btn-pink {
+  grid-column: 1 / -1;
+}
+
+/* Butang pink sahaja */
+.report-btn-pink {
+  color: #ffffff;
+  background: #ec4f7a;
+  border: 1px solid #ec4f7a;
+}
+
+.report-btn-pink:hover {
+  background: #d93d69;
+  border-color: #d93d69;
+  transform: translateY(-2px);
+}
+
+/* Telefon */
+@media (max-width: 520px) {
+  .report-actions-weekly {
+    grid-template-columns: 1fr;
+  }
+
+  .report-actions-weekly .report-btn-pink {
+    grid-column: auto;
+  }
+}
